@@ -1,0 +1,34 @@
+{
+	"author"          : {
+		"name"        : "constantology",
+		"email"       : "christos@muigui.com",
+		"url"         : "http://muigui.com"
+	},
+	"description"     : "d8 is a date parsing and formatting micro-framework for modern JavaScript engines.",
+    "dependencies"    : {
+    	"m8"          : ">= 0.4.3"
+    },
+	"devDependencies" : {
+		"catn8"       : ">= 0.0.2",
+		"chai"        : ">= 1.2.0",
+		"mocha"       : ">= 1.4.2"
+	},
+	"engines"         : {
+		"node"        : ">= 0.8.x"
+	},
+	"keywords"        : ["date"],
+	"licenses"        : [ {
+		"type"        : "MIT",
+	     "url"        : "https://raw.github.com/constantology/d8/master/LICENSE"
+	} ],
+	"main"            : "./d8",
+	"name"            : "d8",
+	"repository"      : {
+		"type"        : "git",
+		"url"         : "git@github.com:constantology/d8.git"
+	},
+	"scripts"         : {
+		"test"        : "mocha -c --ignore-leaks -R spec -u tdd ./test/*.test.js"
+	},
+	"version"         : "0.4.4"
+}

@@ -1,0 +1,8 @@
+BUILD
+BUILDROOT
+rpmmacros_MadFace
+RPMS
+SRPMS
+SOURCES/MadFace
+SOURCES/MadFace-R-libs
+
