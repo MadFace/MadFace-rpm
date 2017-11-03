@@ -18,7 +18,7 @@ case $1 in
     build)
         ## create .rpmmacros
 	echo "%_topdir        $PWD" > rpmmacros_MadFace
-	ln -sf /a/home/local/gen/var/grid-rpm/MadFace/rpmmacros_MadFace ~/.rpmmacros
+	ln -sf $PWD/rpmmacros_MadFace ~/.rpmmacros
 	specs="MadFace.spec"
 	if [ ! -z "$2" ]; then
 	    case $2 in
