@@ -1,7 +1,7 @@
 Summary: MadFace
 Name: MadFace
 Version: 0.2.0
-Release: 1
+Release: 5
 License: GPL
 Group: System Environment/Daemons
 URL: http://goegrid-controller.ph2.physik.uni-goettingen.de:8111
@@ -17,7 +17,7 @@ Requires: nodejs
 Requires: npm
 Requires: tmpwatch
 Requires: firefox
-Requires: docker-io
+#Requires: docker-io
 Requires: ImageMagick
 Requires: festival
 Requires: xdotool
@@ -159,8 +159,8 @@ groupdel %{madface_group}
 %{_Rlibdir}
 
 %changelog
-* Mon Oct 23 2017 Gen Kawamura <Gen.Kawamura@cern.ch> 0.3.0-1
-- For RHEL7
+* Mon Oct 23 2017 Gen Kawamura <Gen.Kawamura@cern.ch> 0.2.0-5
+- Dockerized by RHEL6 and RHEL7
 * Mon Aug 01 2016 Gen Kawamura <Gen.Kawamura@cern.ch> 0.2.0-4
 - Added some patches
 * Mon Aug 01 2016 Gen Kawamura <Gen.Kawamura@cern.ch> 0.2.0-3
