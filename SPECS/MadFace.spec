@@ -124,7 +124,7 @@ useradd -r %{madface_user} -c 'MadFace System' -u %{madface_uid} -g %{madface_gr
 
 %post
 echo "Setting up Ionic and Cordova"
-which cordova || npm install -g cordova@5.1.1
+which cordova || npm install -g cordova@6.0.0
 if ! which ionic; then
     npm install -g ionic@1.6.1
     WRONG_FILE=/usr/lib/node_modules/ionic/node_modules/ionic-app-lib/lib/config.js

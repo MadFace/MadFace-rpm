@@ -30,7 +30,11 @@ case $1 in
 		    ;;
 	    esac
 	fi
-	rpmbuild --define 'dist .el7' --clean -ba SPECS/$specs
+	## Skipping check-buildroot
+	export QA_SKIP_BUILD_ROOT=1
+
+	## Building
+	rpmbuild --clean --define "debug_package %{nil}" -ba SPECS/$specs
 	;;
     install)
 	yum -y --nogpgcheck install epel-release
