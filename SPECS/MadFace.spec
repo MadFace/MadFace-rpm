@@ -58,6 +58,7 @@ BuildRequires: libjpeg-turbo-devel
 %define _logdir         /var/log/MadFace
 %define _piddir         /var/run/MadFace
 %define _Rlibdir        /usr/lib64/R/library
+%define _sbindir        /usr/sbin
 
 %define madface_uid   374
 %define madface_user  madface
@@ -86,6 +87,7 @@ MadFace R libraries
 [ ! -d $RPM_BUILD_ROOT/%{_logdir} ] && mkdir -p $RPM_BUILD_ROOT/%{_logdir}
 [ ! -d $RPM_BUILD_ROOT/%{_piddir} ] && mkdir -p $RPM_BUILD_ROOT/%{_piddir}
 [ ! -d $RPM_BUILD_ROOT/%{_Rlibdir} ] && mkdir -p $RPM_BUILD_ROOT/%{_Rlibdir}
+[ ! -d $RPM_BUILD_ROOT/%{_sbindir} ] && mkdir -p $RPM_BUILD_ROOT/%{_sbindir}
 cd ..
 
 ## package
@@ -98,6 +100,7 @@ cp -vr %{name} $RPM_BUILD_ROOT/%{_prefix}
 MADFACE_HOME=%{_prefix}/MadFace
 mv -v $RPM_BUILD_ROOT/%{_prefix}/MadFace/daemon/madface.conf $RPM_BUILD_ROOT/%{_etc}/madface.conf
 mv -v $RPM_BUILD_ROOT/%{_prefix}/MadFace/daemon/madfaced $RPM_BUILD_ROOT/%{_etc}/rc.d/init.d/
+mv -v $RPM_BUILD_ROOT/%{_prefix}/MadFace/daemon/madface-default-start $RPM_BUILD_ROOT/%{_sbindir}
 rmdir -v $RPM_BUILD_ROOT/%{_prefix}/MadFace/daemon
 rm -v $RPM_BUILD_ROOT/%{_prefix}/MadFace/data
 ln -s %{_datadir} $RPM_BUILD_ROOT/%{_prefix}/MadFace/data
@@ -153,6 +156,7 @@ groupdel %{madface_group}
 %{_piddir}
 %defattr(-,root,root)
 %{_etc}/*
+%{_sbindir}
 
 %files R-libs
 %defattr(-,root,root)
