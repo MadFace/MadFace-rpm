@@ -119,7 +119,7 @@ done
 %pre
 echo "Creating new user [madface] ..."
 groupadd -r %{madface_group} -g %{madface_gid}
-useradd -r %{madface_user} -c 'MadFace System' -u %{madface_uid} -g %{madface_group} -g dockerroot -d %{_prefix}/MadFace -M
+useradd -r %{madface_user} -c 'MadFace System' -u %{madface_uid} -g %{madface_group} -d %{_prefix}/MadFace -M
 
 
 %post
