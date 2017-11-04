@@ -1,5 +1,7 @@
 #!/bin/sh
 
+VERSION=0.2.0
+
 usage="[$0] [sync|build|ctest|apply]"
 [ $# -eq 0 ] && echo "$usage" && exit 0
 
@@ -11,8 +13,8 @@ case $1 in
 	rm -rf MadFace MadFace-R-libs
 	mv -v madface MadFace
 	mv -v R-madface.el6 MadFace-R-libs
-	tar --exclude-vcs -zcvf MadFace-0.3.0.tar.gz MadFace
-	tar --exclude-vcs -zcvf MadFace-R-libs-0.3.0.tar.gz MadFace-R-libs
+	tar --exclude-vcs -zcvf MadFace-${VERSION}.tar.gz MadFace
+	tar --exclude-vcs -zcvf MadFace-R-libs-${VERSION}.tar.gz MadFace-R-libs
 	cd ..
 	;;
     build)
