@@ -123,9 +123,9 @@ useradd -r %{madface_user} -c 'MadFace System' -u %{madface_uid} -g %{madface_gr
 
 
 %post
-echo "Setting up Ionic and Cordova"
-which cordova || npm install -g cordova@6.0.0
 if ! which ionic; then
+    echo "Installing Ionic and Cordova modules"
+    npm install -g cordova@6.0.0 bplist-parser@0.1.1
     npm install -g ionic@1.6.1
     WRONG_FILE=/usr/lib/node_modules/ionic/node_modules/ionic-app-lib/lib/config.js
     cat $WRONG_FILE | perl -pe "s/CONFIG_FILE:.*/CONFIG_FILE: \'.\/ionic\/ionic.config\',/g" > /tmp/config.js
