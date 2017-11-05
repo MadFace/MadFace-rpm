@@ -156,7 +156,7 @@ groupdel %{madface_group}
 %{_piddir}
 %defattr(-,root,root)
 %{_etc}/*
-%{_sbindir}
+%{_sbindir}/*
 
 %files R-libs
 %defattr(-,root,root)
