@@ -33,6 +33,9 @@ Requires: festvox-rms-arctic-hts
 Requires: festvox-awb-arctic-hts
 Requires: festvox-clb-arctic-hts
 Requires: festvox-jmk-arctic-hts
+Requires: sysstat
+Requires: bc
+
 
 %package R-libs
 Summary: R libraries used for MadFace analyzer
