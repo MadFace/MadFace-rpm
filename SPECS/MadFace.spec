@@ -1,7 +1,7 @@
 Summary: MadFace
 Name: MadFace
 Version: 0.2.0
-Release: 5
+Release: 6
 License: GPL
 Group: System Environment/Daemons
 URL: http://goegrid-controller.ph2.physik.uni-goettingen.de:8111
@@ -166,6 +166,8 @@ groupdel %{madface_group}
 %{_Rlibdir}
 
 %changelog
+* Mon Oct 23 2017 Gen Kawamura <Gen.Kawamura@cern.ch> 0.2.0-6
+- Updated default links, capture processor
 * Mon Oct 23 2017 Gen Kawamura <Gen.Kawamura@cern.ch> 0.2.0-5
 - Dockerized by RHEL6 and RHEL7
 * Mon Aug 01 2016 Gen Kawamura <Gen.Kawamura@cern.ch> 0.2.0-4
